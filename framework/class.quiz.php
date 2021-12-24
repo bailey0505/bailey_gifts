@@ -71,4 +71,20 @@ class Quiz{
         return true;
     }
 
+    ///
+    // Function for getting all user quiz results
+    ///
+    public function getUserResults($order = false){
+        $sql = 'SELECT * FROM users';
+        
+        if($order){
+            $sql .= ' ORDER BY quiz_score DESC, time_spent ASC, Id_users DESC';
+        }
+        $users = $this->db->query($sql)->fetchAll();
+
+        foreach($users as &$user){
+            $user['quiz_done'] = !empty($user['quiz_score']) ? true : false;
+        }
+        return $users;
+    }
 }
