@@ -105,7 +105,7 @@
                 <h1>Bailey Christmas Day Gift Special</h1>
             </div>
             
-            <div class='row'>
+            <div class='row mt-3 mb-3'>
                 <marquee direction='right'>
                     <img src='assets/images/luke.png' class='top-profile-images' />
                     <img src='assets/images/kaden.png' class='top-profile-images' />
